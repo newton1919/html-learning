@@ -1,0 +1,60 @@
+.image {
+	width: 200px;
+	height: 200px;
+	border-radius: 255px;
+	
+	
+	
+	animation-name: myfirst;
+	animation-duration: 4s;
+	animation-timing-function: ease;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+	animation-play-state: paused;
+	/* Firefox: */
+	-moz-animation-name: myfirst;
+	-moz-animation-duration: 4s;
+	-moz-animation-timing-function: ease;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-direction: normal;
+	-moz-animation-play-state: paused;
+	/* Safari 和 Chrome: */
+	-webkit-animation-name: myfirst;
+	-webkit-animation-duration: 4s;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction: normal;
+	-webkit-animation-play-state: paused;
+}
+
+.label-header {
+	text-align: center;
+	margin-top: 50px;
+}
+
+.content1-picture {
+	text-align: center;
+	margin-top: 100px;
+}
+
+.control-buttons {
+	text-align: center;
+	margin-top: 50px;
+}
+
+
+
+@keyframes myfirst {
+	from {transform: rotateY(0deg);}
+	to {transform: rotateY(360deg);}
+}
+
+@-moz-keyframes myfirst {
+	from {-moz-transform: rotateY(0deg);}
+	to {-moz-transform: rotateY(360deg);}
+}
+
+@-webkit-keyframes myfirst {
+	from {-webkit-transform: rotateY(0deg);}
+	to {-webkit-transform: rotateY(360deg);}
+}
