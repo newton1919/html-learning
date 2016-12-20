@@ -1,0 +1,58 @@
+<html>
+<head>
+<meta charset="utf-8" />
+<title>HTML5 Canvas实现动态下雪效果</title>
+<script type="text/javascript" src="../js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="../js/jquery.let_it_snow.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#btn_play").click(function() {
+			$("canvas.snow").let_it_snow({
+				windPower : 1,
+				speed : 2,
+				color : "#392F52",
+				size : 25,
+				opacity : 0,
+				count : 20,
+				interaction : false,
+				image : "images/snow.png"
+			});
+
+			$("canvas.snow_small").let_it_snow({
+				windPower : 0,
+				speed : 3,
+				color : "#ffffff",
+				size : 10,
+				opacity : 0.7,
+				count : 30,
+				interaction : false,
+				image : false
+			});
+		});
+
+		$("#btn_stop").click(function() {
+			window.location.reload();
+		});
+
+	});
+</script>
+<link type="text/css" href="css/custom.css" rel="stylesheet" />
+</head>
+<body>
+	<div id="div_buttons">
+		<button id="btn_stop">Stop</button>
+		<button id="btn_play">Play</button>
+	</div>
+	<div id="div_background">
+		<object data="images/christmas_background.svg" width="100%"
+			height="100%" type="image/svg+xml"> </object>
+	</div>
+	<div id="div_snow">
+		<canvas width="100%" height="100%" class="snow"></canvas>
+	</div>
+	<div id="div_snow_small">
+		<canvas width="100%" height="100%" class="snow_small"></canvas>
+	</div>
+
+</body>
+</html>

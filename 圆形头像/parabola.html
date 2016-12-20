@@ -1,0 +1,37 @@
+<html>
+<head>
+<meta charset="utf-8"/>
+<script type="text/javascript" src="../js/jquery-3.1.1.js"></script>
+<link type="text/css" href="css/circle.css" rel="stylesheet" />
+<script type="text/javascript">
+	$(document).ready(function() {
+		//start animation
+		$("#start").click(function(evt) {
+			evt.preventDefault();
+			$(".image").css("animation-play-state", "running");
+			$(".image").css("-moz-animation-play-state", "running");
+			$(".image").css("-webkit-animation-play-state", "running");
+		});
+
+		//stop animation
+		$("#stop").click(function(evt) {
+			evt.preventDefault();
+			$(".image").css("animation-play-state", "paused");
+			$(".image").css("-moz-animation-play-state", "paused");
+			$(".image").css("-webkit-animation-play-state", "paused");
+		});
+	});
+</script>
+</head>
+<body>
+	<div class="label-header">
+		<h4>下面演示css3控制物体做抛物线运动</h4>
+	</div>
+	<div class="control-buttons">
+		<a id="start" href="#">开始</a> <a id="stop" href="#">结束</a>
+	</div>
+	<div class="content1-picture">
+		<img class="image" src="images/headImage1_1.jpg" />
+	</div>
+</body>
+</html>
