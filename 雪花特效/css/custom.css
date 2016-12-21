@@ -22,11 +22,17 @@ html, body {
 }
 
 #div_buttons {
+	background: #54b4d2;
 	position:absolute;
 	z-index: 150;
 	width: 100%;
 	top: 0px;
 	left: 0px;
+}
+
+#text {
+	font-size: 3em;
+	color: white;
 }
 
 button {
